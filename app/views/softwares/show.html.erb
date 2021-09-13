@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @software.name %>
+</p>
+
+<p>
+  <strong>Image_url:</strong>
+  <img src="<%= @software.image_url %>" style="height: 100px; width 100px;" alt="Logo">
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @software.category_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @software.content %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @software.site %>
+</p>
+
+<%= link_to 'Edit', edit_software_path(@software) %> |
+<%= link_to 'Back', softwares_path %>

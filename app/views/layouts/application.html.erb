@@ -5,12 +5,47 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/home">Me Ajuda Ae</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Modalidades de Ensino</a>
+            <ul class="dropdown-menu teaching">
+              <li><a class="dropdown-item" href="/teachings/1">Ensino Remoto</a></li>
+              <li><a class="dropdown-item" href="/teachings/2">Ensino Híbrido</a></li>
+              <li><a class="dropdown-item" href="/teachings/3">Educação a Distância</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tools">Ferramentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/softwares">Softwares</a>
+          </li>
+        </ul>
+      </div>
+      <span class="nav-item dropdown">
+          <span style="color:#cecece; font-size: 13px;">Thiago</span>
+      </span>
+    </nav>
+
+    <div class="container-fluid">
+          <%= yield %>
+        </div>
+
   </body>
 </html>
