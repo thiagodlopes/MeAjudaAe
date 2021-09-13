@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+    <%= form.select :category_id, options_for_select(@categories.collect{ |category| [category.name, category.id] }, :selected => form.object.category_id),{include_blank: 'Selecione a categoria'} %>
   </div>
 
   <div class="field">

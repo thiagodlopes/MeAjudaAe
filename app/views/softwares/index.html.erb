@@ -19,7 +19,7 @@
       <tr>
         <td><%= software.name %></td>
         <td><img src="<%= software.image_url %>" style="height: 100px; width: 100px" alt="Logo"></td>
-        <td><%= software.category_id %></td>
+        <td><%= software.category.name %></td>
         <td><%= software.content %></td>
         <td><%= software.site %></td>
         <td><%= link_to 'Show', software %></td>

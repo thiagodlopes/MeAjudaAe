@@ -13,15 +13,18 @@ class SoftwaresController < ApplicationController
   # GET /softwares/new
   def new
     @software = Software.new
+    @categories = Category.all
   end
 
   # GET /softwares/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /softwares or /softwares.json
   def create
     @software = Software.new(software_params)
+    @categories = Category.all
 
     respond_to do |format|
       if @software.save

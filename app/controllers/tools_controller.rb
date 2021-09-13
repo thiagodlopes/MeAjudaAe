@@ -13,15 +13,18 @@ class ToolsController < ApplicationController
   # GET /tools/new
   def new
     @tool = Tool.new
+    @categories = Category.all
   end
 
   # GET /tools/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /tools or /tools.json
   def create
     @tool = Tool.new(tool_params)
+    @categories = Category.all
 
     respond_to do |format|
       if @tool.save
