@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tool.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <img src="<%= @tool.image_url %>" style="height: 100px; width: 100px" alt="Logo">
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @tool.category_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @tool.content %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @tool.site %>
+</p>
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>
