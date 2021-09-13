@@ -18,7 +18,7 @@
     <% @softwares.each do |software| %>
       <tr>
         <td><%= software.name %></td>
-        <td><%= software.image_url %></td>
+        <td><img src="<%= software.image_url %>" style="height: 100px; width: 100px" alt="Logo"></td>
         <td><%= software.category_id %></td>
         <td><%= software.content %></td>
         <td><%= software.site %></td>
