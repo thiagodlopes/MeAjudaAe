@@ -1,3 +1,118 @@
 // Place all the styles related to the Softwares controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+// Place all the styles related to the softwares controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.softwares-main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+}
+
+.softwares {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+}
+
+.software_card {
+  // cursor:pointer;
+  position: relative; /*Precisa desse position: relative para usar o position:absolute na imagem da classe*/
+  display: flex;
+  grid-column-end: span 3;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+}
+
+.software_card img {
+  display: block;
+  background-color: #e0e0e0;
+}
+
+.software_card .fa-pen{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.software_card-content{
+    padding: 15px;
+}
+.software_card-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.software_card-header__primmary {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 2px solid #ee8600;
+}
+
+.software_name {
+  font-weight: 700;
+}
+
+.software_category {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.software_card-body {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.my-card-button{
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .softwares-main {
+    grid-template-columns: 1px repeat(12, 1fr) 1px;
+    grid-gap: 10px;
+  }
+
+  .software_card {
+    grid-column-end: span 6;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .softwares-main {
+    grid-gap: 10px;
+  }
+
+  .software_card {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .softwares-main {
+    grid-template-columns: 1px repeat(6, 1fr) 1px;
+    grid-gap: 10px;
+  }
+  .softwares {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 40px;
+  }
+  .software_card {
+    grid-column-end: span 6;
+  }
+}
