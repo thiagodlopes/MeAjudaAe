@@ -125,4 +125,76 @@ body {
   }
 }
 
-//
+.footer{
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 15vw;
+  background-color: black;
+  margin-top: 10vw;
+  color: #fff;
+}
+
+.name_container{
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.project_name{
+  font-size: 24px;
+}
+
+.course_logo{
+  max-width: 100px;
+  max-height: 100px;
+  vertical-align: baseline;
+}
+
+.course_name{
+  display: inline-block;
+  font-size: 32px;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #fff;
+}
+
+.social_media{
+  display: inline-block;
+}
+
+#icon{
+  background: #323232;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  width: 30px;
+  text-align: center;
+  margin: 5px 2px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.fa-twitter:hover{
+  background-color: #55ACEE!important;
+}
+
+.fa-facebook-f:hover{
+  background: #3B5998!important;
+}
+
+.fa-linkedin-in:hover{
+  background: #007bb5!important;
+}
+
+.fa-instagram:hover{
+  background: #c13584!important;
+}
+
+.fa-github:hover{
+  background: white!important;
+  color: #323232!important;
+}
+
+.fa-whatsapp:hover{
+  background: #25D366!important;
+}

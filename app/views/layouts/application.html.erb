@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/d880d313fc.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -37,7 +38,7 @@
             <a class="nav-link" href="/softwares">Softwares</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/categories">Categories</a>
+            <a class="nav-link" href="/categories">Categorias</a>
           </li>
         </ul>
       </div>
@@ -46,9 +47,10 @@
       </span>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container">
           <%= yield %>
-        </div>
+    </div>
+    <%= render 'layouts/footer' %>
 
   </body>
 </html>
