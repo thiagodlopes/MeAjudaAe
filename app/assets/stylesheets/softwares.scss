@@ -11,10 +11,10 @@
 }
 
 .softwares {
-  grid-column: 2 / span 12;
   display: grid;
+  grid-column: 2 / span 12;
   grid-template-columns: repeat(12, minmax(auto, 60px));
-  grid-gap: 40px;
+  grid-gap: 30px;
 }
 
 .software_card {
@@ -27,6 +27,11 @@
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.45);
+
+  //imagem pra fora
+  margin-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 40px;
 }
 
 .software_card img {
@@ -62,6 +67,8 @@
 
 .software_name {
   font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 .software_category {
@@ -115,4 +122,30 @@
   .software_card {
     grid-column-end: span 6;
   }
+}
+
+.edit-software{
+  margin-right: 1vw;
+  margin-top: 1vw;
+}
+
+.img-center{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  // align-self: center;
+  border-radius: 50%;
+}
+
+.software_btn{
+  position: absolute;
+  bottom:-20px;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.btn{
+  height: 40px!important;
+  width: 80px!important;
 }

@@ -3,7 +3,7 @@
 <div class="header-container">
   <div class="page-header">
     <div class="page-header_content">
-      <h1>Softwares</h1>
+      <h1><i class="fas fa-laptop"></i> Softwares</h1>
     </div>
   </div>
 </div>
@@ -12,7 +12,7 @@
   <section class="softwares">
     <% @softwares.each do |software| %>
     <div class="software_card">
-        <img src="<%=software.image_url%>" style="min-height:258px; min-width:258px;" alt="logo">
+        <img class="img-center" src="<%=software.image_url%>" style="height:100px; width:100px;" alt="logo">
         <a href="softwares/<%=software.id%>/edit"><i class="fas fa-pen"></i></a>
       <div class="software_card-content">
         <!-- <a class="card_link" href="<%#= "/softwares/#{software.id}/edit" %>"> -->
@@ -27,9 +27,7 @@
           <div class="software_card-body">
             <%= software.content %>
           </div>
-          <div class="my-card-button">
-              <a target=”_blank” href="<%= software.site%>" class="btn btn-primary"> Ver Site</a>
-          </div>
+          <a target=”_blank” href="<%= software.site%>" class="btn btn-primary software_btn"> Ver Site</a>
         <!-- </a> -->
       </div>
 
@@ -37,7 +35,7 @@
     <% end %>
 
     <div class="software_card">
-        <img src="http://www.shoppingdopapel.com.br/images/products/empty.png" style="min-height:258px; min-width:258px;" alt="logo">
+        <img class="img-center" src="http://www.shoppingdopapel.com.br/images/products/empty.png" style="height:100px; width:100px;" alt="logo">
       <div class="software_card-content">
         <!-- <a class="card_link" href="<%#= "/softwares/#{software.id}/edit" %>"> -->
           <div class="software_card-header">
@@ -52,7 +50,7 @@
             Clique no botão abaixo para cadastrar um software
           </div>
           <div class="my-card-button">
-              <%= link_to 'New Software', new_software_path, class:'btn btn-primary' %>
+              <%= link_to 'Criar', new_software_path, class:'btn btn-primary' %>
           </div>
         <!-- </a> -->
       </div>

@@ -10,18 +10,19 @@
       </ul>
     </div>
   <% end %>
-
+<div class="container">
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, style:'width:100%;', rows:30, class:'form-control' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>

@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
+<div class="header-container">
+  <div class="page-header">
+    <div class="page-header_content">
+      <h1><%=@teaching.name%></h1>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @teaching.name %>
-</p>
+<div class="info">
+  <i class="fas fa-info-circle inline-block orange_text"></i>
+  <p class="teaching_paragraph inline-block">O que é?</p>
+</div>
 
-<p>
-  <strong>Content:</strong>
+<div style="white-space: pre-wrap; text-align: justify;">
   <%= @teaching.content %>
-</p>
+</div>
 
 <%= link_to 'Edit', edit_teaching_path(@teaching) %> |
 <%= link_to 'Back', teachings_path %>
