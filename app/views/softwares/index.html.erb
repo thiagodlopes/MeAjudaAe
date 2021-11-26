@@ -13,7 +13,6 @@
     <% @softwares.each do |software| %>
     <div class="software_card">
         <img class="img-center" src="<%=software.image_url%>" style="height:100px; width:100px;" alt="logo">
-        <a href="softwares/<%=software.id%>/edit"><i class="fas fa-pen"></i></a>
       <div class="software_card-content">
         <!-- <a class="card_link" href="<%#= "/softwares/#{software.id}/edit" %>"> -->
           <div class="software_card-header">
@@ -33,28 +32,5 @@
 
     </div>
     <% end %>
-
-    <div class="software_card">
-        <img class="img-center" src="http://www.shoppingdopapel.com.br/images/products/empty.png" style="height:100px; width:100px;" alt="logo">
-      <div class="software_card-content">
-        <!-- <a class="card_link" href="<%#= "/softwares/#{software.id}/edit" %>"> -->
-          <div class="software_card-header">
-            <div class="software_card-header__primmary">
-              <div class="software_category">
-                <span class="badge bg-dark">Criador</span>
-              </div>
-              <h3 class="software_name">Criar Software</h3>
-            </div>
-          </div>
-          <div class="software_card-body">
-            Clique no botão abaixo para cadastrar um software
-          </div>
-          <div class="my-card-button">
-              <%= link_to 'Criar', new_software_path, class:'btn btn-primary' %>
-          </div>
-        <!-- </a> -->
-      </div>
-    </div>
-
   </section>
 </main>
