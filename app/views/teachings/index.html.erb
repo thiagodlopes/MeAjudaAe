@@ -12,13 +12,13 @@
   <section class="softwares" style="align-items: center;">
     <% @teachings.each do |teaching| %>
     <div class="card" style="width:18rem;">
-      <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-social.png" class="card-img-top" alt="...">
-      <a href="teachings/<%=teaching.id%>/edit" style="position: absolute;top:0px;right:7px;"><i class="fas fa-pen"></i></a>
+      <a style="text-decoration:none;"href="teachings/<%=teaching.id%>">
       <div class="card-body" style="background-color:#212121">
         <h5 class="card-title">
-        <%= link_to "#{teaching.name}", teaching, class:'card-title', style:'text-decoration:none;' %>
+          <h5 class="card-title"><i class="fas fa-laptop"></i> <%=teaching.name%></h5>
         </h5>
       </div>
+      </a>
     </div>
     <% end %>
 </section>
